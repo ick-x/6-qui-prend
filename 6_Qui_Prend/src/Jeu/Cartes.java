@@ -8,7 +8,7 @@ public class Cartes {
 
     //création d'une Array liste de Cartes qui servira de paquet
     private static ArrayList<Cartes> paquet = new ArrayList<Cartes>(nbCartes);
-
+    
     public Cartes(int numéro, int tetes)
     {
             //constructeur de la Class carte, qui défini le numéro
