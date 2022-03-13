@@ -10,7 +10,7 @@ public class Serie {
 	
 	//Initialisation d'une série
 	public Serie() {
-		this.indice = ++compteur;
+		this.indice = compteur++;
 		this.nbCartes = 0;
 	}
 	
@@ -38,7 +38,7 @@ public class Serie {
 	
 	//Fonction toString
 	public String toString() {
-		String s = "- Série n° " + this.indice + " : ";
+		String s = "- Série n° " + ((this.indice % 4) + 1) + " : ";
 		for (int i = 0; i < nbCartes; ++i)
 			s = s + ligne.get(i) + " ";
 		return s;

@@ -1,6 +1,9 @@
 package objets;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.io.*;
 
 public class Joueurs {
     private int nbJoueurs;
@@ -9,10 +12,8 @@ public class Joueurs {
     //Création d'une ArrayList représentant l'ensemble des joueurs
     private ArrayList<Joueur> listeJoueurs = new ArrayList<Joueur>();
     
-    //Initialisation de la liste de joueurs à partir d'un fichier texte
-    public Joueurs()
-    {
-    	//lecture du fichier texte 
+  //Initialisation de la liste de joueurs à partir d'un fichier texte
+    public Joueurs() {
     	try {
     		String fichier ="config.txt";
     		InputStream input=new FileInputStream(fichier); 
@@ -30,27 +31,6 @@ public class Joueurs {
     	System.out.println(e.toString());
     	}
     }
-    
-    /*
-    public Joueurs() {
-    	System.out.println("Veuillez saisir la liste de joueurs :");
-        boolean continuer = true;
-        do {
-        	String nomJ = Jeu.scan.nextLine();
-        	if (nomJ.isEmpty() || listeJoueurs.size() > MAX_JOUEURS)
-        		continuer = false;
-        	else {
-        		Joueur j = new Joueur(nomJ);
-            	listeJoueurs.add(j);
-            	nbJoueurs = listeJoueurs.size();
-        	}
-        }while(continuer);
-    	
-    } */
-    	
-    	
-    
-   
     
     //Getteurs
     public Joueur getJoueur(int i) {

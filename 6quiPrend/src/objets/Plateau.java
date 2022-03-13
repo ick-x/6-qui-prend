@@ -13,6 +13,7 @@ public class Plateau {
 	
 	//Initialisation d'un plateau avec 4 séries
 	public Plateau() {
+		
 		for (int i = 0; i < NB_SERIES; ++i)
 			listeS.add(new Serie());
 	}
